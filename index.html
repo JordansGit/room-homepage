@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/style.css">
 
   <title>Frontend Mentor | Room homepage</title>
@@ -26,7 +30,7 @@
   </header>
   
   <main class="grid">
-    <section class="image-gallery">
+    <section class="hero-img">
       <img class="slide-1-img img-desktop" src="./images/desktop-image-hero-1.jpg">
       <img class="slide-2-img img-desktop" src="./images/desktop-image-hero-2.jpg">
       <img class="slide-3-img img-desktop" src="./images/desktop-image-hero-3.jpg">
@@ -35,13 +39,13 @@
       <img class="slide-2-img img-mobile" src="./images/mobile-image-hero-2.jpg">
       <img class="slide-3-img img-mobile" src="./images/mobile-image-hero-3.jpg">
 
-      <div class="slider-btns">
-        <img class="prev-btn" src="./images/icon-angle-left.svg">
-        <img class="next-btn" src="./images/icon-angle-right.svg">
+      <div class="slide-btns">
+        <img class="slide-btn" id="prev-btn" src="./images/icon-angle-left.svg">
+        <img class="slide-btn" id="next-btn" src="./images/icon-angle-right.svg">
       </div>
     </section>
 
-    <section class="image-gallery-text">
+    <section class="hero-text">
       <div class="slide-1-text">
         <h2 class="slide-title">
           Discover innovative ways to decorate
@@ -51,10 +55,10 @@
           Our experts combine form and function in bringing your vision to life. Create a room in your 
           own style with our collection and make your property a reflection of you and what you love.        
         </p>
-        <a class="cta-btn">
-          Shop now
+        <div class="cta">
+          <p class="cta-text">Shop now</p>
           <img class="arrow" src="./images/icon-arrow.svg">
-        </a>
+        </div>
       </div>
 
       <div class="slide-2-text">
@@ -66,10 +70,10 @@
           Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
           store locator. Any questions? Don't hesitate to contact us today.        
         </p>
-        <a class="cta-btn">
-          Shop now
+        <div class="cta">
+          <p class="cta-text">Shop now</p>
           <img class="arrow" src="./images/icon-arrow.svg">
-        </a>
+        </div>
       </div>
     
       <div class="slide-3-text">
@@ -81,18 +85,16 @@
           to ensure that every product is made as perfect and as consistent as possible. With three decades of 
           experience in this industry, we understand what customers want for their home and office.        
         </p>
-        <a class="cta-btn">
-          Shop now
+        <div class="cta">
+          <p class="cta-text">Shop now</p>
           <img class="arrow" src="./images/icon-arrow.svg">
-        </a>
+        </div>
       </div>
 
     </section>
 
-    <section class="grid-item">
-      <img class="about-img" src="./images/image-about-dark.jpg">
-    </section>
-    <section class="grid-item">
+    <img class="about-img about-img-1" src="./images/image-about-dark.jpg">
+    <section class="about-text">
       <h2 class="about-title">About our furniture</h2>
       <p class="about-body">
         Our multifunctional collection blends design and function to suit your individual taste.
@@ -101,10 +103,7 @@
         or anything in between. Product specialists are available to help you create your dream space.      
       </p>
     </section>
-    <section class="grid-item">
-      <img class="about-img" src="./images/image-about-light.jpg">
-    </section>
-
+    <img class="about-img about-img-2" src="./images/image-about-light.jpg">
   </main>
   
   <!--
