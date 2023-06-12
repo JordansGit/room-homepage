@@ -69,6 +69,10 @@ html {
   font-size: 12px;
 }
 
+.nav-link {
+  text-transform: lowercase; 
+}
+
 .slide-body, .about-body, .nav-link {
   font-weight: 500;
 }
@@ -96,6 +100,18 @@ html {
 .slide-title {
   font-size: 3rem;
 }
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .slide-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1252px) {
+  .slide-title {
+    font-size: 3.7rem;
+  }
+}
 .about-title {
   letter-spacing: 5px;
 }
@@ -105,13 +121,25 @@ html {
   letter-spacing: 12px;
 }
 
+/* Active States */ 
+.mobile-menu, .nav-close-btn, .nav-link, .slide-btn, .cta {
+  cursor: pointer;
+}
+
+
+
 /* ==================
    Layout
 ===================== */
 
 /* Global */ 
 
-.grid {
+body {
+  max-height: 100vh;
+  /*overflow: hidden;*/ /* this fucks up mobile */ 
+}
+
+.row {
   display: grid;
   grid-template-areas: 
   "hero-img"
@@ -121,13 +149,61 @@ html {
   "about-img-2"
 }
 
-@media (min-width: 600px) {
-  .grid {
+@media (min-width: 800px) {
+  .row {
+    grid-template-areas: unset;
+    grid-template-columns: unset; 
+  }
+  .row-1 {
     grid-template-areas: 
-      "hero-img hero-img hero-text"
-      "about-img-1 about-text about-img-2"
+      "hero-img hero-text";
+    grid-template-columns: 58% 42%; 
+    /*grid-template-columns: auto auto; */
+  }
+  .row-2 {
+    grid-template-areas: 
+      "about-img-1 about-text about-img-2";
+    /*grid-template-columns: 30% auto 30%; */
   }
 }
+
+
+/*
+@media (min-width: 800px) {
+  .row {
+    grid-template-areas: 
+      "hero-img hero-img hero-text hero-text"
+      "about-img-1 about-text about-text about-img-2";
+    grid-template-columns: 30% auto 160px 30%; 
+  }
+}
+
+@media (min-width: 1660px) {
+  .row {
+    grid-template-columns: 30% auto auto 30%; 
+  }
+}*/ 
+
+
+
+
+
+.img-desktop {
+  width: 100%;
+  max-height: 621px; 
+
+}
+
+.hero-img {
+  /*max-width: 1000px;*/
+
+}
+
+/* widths; 
+row 1: 12, 23.5, 28, 40
+row 1: 30% 28.75% 11.25% 30%; 
+row 1: 30% auto 160px 30%; 
+row 2: 30%, 40%, 30%; 
 
 /* Header */
 
@@ -153,9 +229,11 @@ nav {
   margin-left: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   header {
     width: initial;
+    left: 5em;
+
   }
   .mobile-menu {
     display: none;
@@ -171,6 +249,15 @@ nav {
   display: flex;
 }
 
+@media (min-width: 800px) {
+  .logo {
+    margin-right: 4em;
+  }
+  .nav-list {
+    gap: 2.5em;
+  }
+}
+
 /* Main */ 
 
 /* Hero Image */ 
@@ -184,7 +271,7 @@ nav {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .img-desktop {
     display: block;
   }
@@ -216,6 +303,39 @@ nav {
   grid-area: hero-text;
 }
 
+@media (min-width: 800px) {
+  .hero-text {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 1015px) {
+  .hero-text {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-text {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+}
+@media (min-width: 1100px) {
+  .hero-text {
+    margin-top: -70px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-text {
+    padding-left: 8em;
+    padding-right: 8em;
+  }
+}
+
 .slide-btns {
   display: flex;
   position: absolute;
@@ -228,13 +348,20 @@ nav {
   width: 57px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
+  .slide-btn {
+    padding: 24px 33px;
+    width: initial;
+  }
+}
+
+@media (min-width: 1100px) {
   .slide-btns {
     right: unset;
     left: 100%;
   }
   .slide-btn {
-    padding: 2em;
+    padding: 24px 33px;
     width: initial;
   }
 }
@@ -245,35 +372,91 @@ nav {
   margin-top: 3em;
 }
 
+@media (min-width: 800px) and (max-width: 1100px) {
+  .cta {
+    margin-top: 1.5em;
+  }
+}
+
 .arrow {
   margin-left: 2em;
 }
 
 /* About */ 
 
-.about-img-1, .about-img-2 {
+.about-img {
   width: 100%;
 }
 
-@media (min-width: 600px) {
-  .about-img-1, .about-img-2 {
-    width: max-content;
+@media (min-width: 800px) {
+  .about-img {
+    /*width: max-content;*/
+    width: 33vw;
   }
 }
 
 .about-img-1 {
+  background: url(../images/image-about-dark.jpg); 
   grid-area: about-img-1;
 }
 
 .about-img-2 {
+  background: url(../images/image-about-light.jpg); 
   grid-area: about-img-2;
+}
+
+/* grouping these 2 classes needs to be below the above classes, otherwise the background-... won't take effect*/ 
+.about-img-1, .about-img-2 {
+  min-height: 266px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+@media (min-width: 800px) {
+  .about-img-1, .about-img-2 {
+    min-height: unset;
+  }
+}
+
+@media (min-width: 1300px) {
+  .about-img-1 {
+    height: 266px;
+    width: 420px;
+  }
+  
+  .about-img-2 {
+    height: 266px;
+    width: 440px;
+  }
 }
 
 .about-text {
   grid-area: about-text;
 }
 
+@media (min-width: 1200px) {
+  .about-text {
+    padding-left: 3.5em;
+    padding-right: 3.2em;
+    margin-top: 1em;
+  }
+  .about-title {
+    font-size: 1.6em;
+  }
+}
+
 .slide-body, .about-body {
   margin-top: 1.5em;
 }
 
+main {
+  height: 100vh;
+}
+
+.row-1 {
+  /*height: 68%;*/
+}
+.row-2 {
+  height: 32%;
+}
