@@ -39,7 +39,7 @@ body {
   background: var(--white);
 }
 
-.nav-link {
+.nav-list {
   color: var(--white);
 }
 
@@ -73,7 +73,7 @@ html {
   text-transform: lowercase; 
 }
 
-.slide-body, .about-body, .nav-link {
+.slide-body, .about-body, .nav-list {
   font-weight: 500;
 }
 
@@ -219,6 +219,7 @@ header {
 
 .nav-close-btn {
   display: none;
+  margin-right: auto;
 }
 
 nav {
@@ -247,16 +248,59 @@ nav {
 
 .nav-list {
   display: flex;
+  gap: 2.5em;
 }
 
 @media (min-width: 800px) {
   .logo {
     margin-right: 4em;
   }
-  .nav-list {
-    gap: 2.5em;
-  }
 }
+
+/* Mobile Nav Classes - nav-open */ 
+
+.nav-open-close-btn {
+  display: block;
+}
+
+.nav-open-nav-list {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.nav-open-body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.nav-open-header {
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.nav-open-nav {
+  display: flex;
+  width: 100%;
+  height: 8.5em;
+  background: var(--white);
+  color: var(--black);
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 2.5em;
+}
+
 
 /* Main */ 
 
@@ -460,3 +504,11 @@ main {
 .row-2 {
   height: 32%;
 }
+
+
+
+/* to do 
+css and js for mobile layout. 
+js for slider. 
+
+*/ 
