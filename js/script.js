@@ -60,4 +60,5 @@ function showSlides(n) {
 It messes up when I resize from mobile to desktop. 
 I have to refresh the page in order to get it working properly again. 
 
+I haven't implemented adding being able to use keyboard left and right for image slider buttons. 
 */ 
