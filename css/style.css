@@ -196,7 +196,6 @@ body {
 
 .hero-img {
   /*max-width: 1000px;*/
-
 }
 
 /* widths; 
@@ -306,7 +305,7 @@ nav {
 
 /* Hero Image */ 
 
-.hero-img {
+.hero-img-container {
   grid-area: hero-img;
   position: relative;
 }
@@ -504,11 +503,3 @@ main {
 .row-2 {
   height: 32%;
 }
-
-
-
-/* to do 
-css and js for mobile layout. 
-js for slider. 
-
-*/ 

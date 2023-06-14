@@ -31,23 +31,24 @@
   
   <main class="grid">
     <div class="row row-1">
-      <section class="hero-img">
-        <img class="slide-1-img img-desktop" src="./images/desktop-image-hero-1.jpg">
-        <img class="slide-2-img img-desktop" src="./images/desktop-image-hero-2.jpg">
-        <img class="slide-3-img img-desktop" src="./images/desktop-image-hero-3.jpg">
+      <section class="hero-img-container">
+        
+        <img class="hero-img-desktop slide-1-img img-desktop" src="./images/desktop-image-hero-1.jpg">
+        <img class="hero-img-desktop slide-2-img img-desktop" src="./images/desktop-image-hero-2.jpg">
+        <img class="hero-img-desktop slide-3-img img-desktop" src="./images/desktop-image-hero-3.jpg">
   
-        <img class="slide-1-img img-mobile" src="./images/mobile-image-hero-1.jpg">
-        <img class="slide-2-img img-mobile" src="./images/mobile-image-hero-2.jpg">
-        <img class="slide-3-img img-mobile" src="./images/mobile-image-hero-3.jpg">
+        <img class="hero-img-mobile slide-1-img img-mobile" src="./images/mobile-image-hero-1.jpg">
+        <img class="hero-img-mobile slide-2-img img-mobile" src="./images/mobile-image-hero-2.jpg">
+        <img class="hero-img-mobile slide-3-img img-mobile" src="./images/mobile-image-hero-3.jpg">
   
         <div class="slide-btns">
-          <img class="slide-btn" id="prev-btn" src="./images/icon-angle-left.svg">
-          <img class="slide-btn" id="next-btn" src="./images/icon-angle-right.svg">
+          <img class="slide-btn" id="prev-btn" onclick="plusSlides(-1)" src="./images/icon-angle-left.svg">
+          <img class="slide-btn" id="next-btn" onclick="plusSlides(1)" src="./images/icon-angle-right.svg">
         </div>
       </section>
   
       <section class="hero-text">
-        <div class="slide-1-text">
+        <div class="slide-text slide-1-text">
           <h2 class="slide-title">
             Discover innovative ways to decorate
           </h2>
@@ -62,7 +63,7 @@
           </div>
         </div>
   
-        <div class="slide-2-text">
+        <div class="slide-text slide-2-text">
           <h2 class="slide-title">
             We are available all across the globe
           </h2>
@@ -77,7 +78,7 @@
           </div>
         </div>
       
-        <div class="slide-3-text">
+        <div class="slide-text slide-3-text">
           <h2 class="slide-title">
             Manufactured with the best materials
           </h2>
