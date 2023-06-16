@@ -25,3 +25,15 @@ Users should be able to:
 - HTML
 - CSS
 - JavaScript
+
+### What I learned
+
+If I wanted to make the image slider work properly when changing window size, use css background images instead of html img tags. 
+slide-1 {
+ bg-img = ...
+}
+@media (min-width: 600) {
+ slide-1 {
+  bg-img = ... 
+ }
+} 
